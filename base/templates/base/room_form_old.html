@@ -1,0 +1,12 @@
+{% extends 'main.html' %} 
+{% block content %}
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+<!-- form: dictionary passed in views.py which contains all the fields in the Room table,
+.as_p is the form format syntax-->
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}
